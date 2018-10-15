@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/qualityshop-admin/qualityshop-admin.iml" filepath="$PROJECT_DIR$/qualityshop-admin/qualityshop-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qualityshop-api/qualityshop-api.iml" filepath="$PROJECT_DIR$/qualityshop-api/qualityshop-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qualityshop-common/qualityshop-common.iml" filepath="$PROJECT_DIR$/qualityshop-common/qualityshop-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qualityshop-generator/qualityshop-generator.iml" filepath="$PROJECT_DIR$/qualityshop-generator/qualityshop-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qualityshop-security.iml" filepath="$PROJECT_DIR$/qualityshop-security.iml" />
+    </modules>
+  </component>
+</project>

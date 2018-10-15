@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qualityshop.dao.UserShareDao">
+
+    <resultMap type="com.qualityshop.entity.UserShareEntity" id="UserShareEntity">
+        <result property="id" column="id"/>
+        <result property="user_id" column="user_id"/>
+        <result property="share_message" column="share_message"/>
+        <result property="share_name" column="share_name"/>
+        <result property="share_type" column="share_type"/>
+        <result property="create_time" column="create_time"/>
+    </resultMap>
+    <sql id="table_columns">
+        id,
+        user_id,
+        share_message,
+        share_type,
+        create_time
+    </sql>
+    <sql id="entity_properties">
+        #{id},
+        #{user_id},
+        #{share_message},
+        #{share_type},
+        #{create_time}
+
+    </sql>
+    <select id="queryByShare" resultMap="UserShareEntity" parameterType="String">
+        select <include refid="table_columns" />
+        from user_share
+        where user_id = #{user_id}
+        order by create_time DESC
+    </select>
+
+    <select id="queryByShareAll" resultMap="UserShareEntity" >
+        select <include refid="table_columns" />
+        from user_share
+        order by create_time DESC
+    </select>
+    <select id="queryByShareCount" resultMap="UserShareEntity" >
+        select <include refid="table_columns" />
+        from user_share
+        order by create_time DESC
+        limit #{param1},#{param2}
+    </select>
+    <select id="queryByShareCountId" resultMap="UserShareEntity" >
+        select <include refid="table_columns" />
+        from user_share
+        where user_id = #{user_id}
+        order by create_time DESC
+        limit #{offset},#{end}
+    </select>
+
+    <insert id="insertByShare" parameterType="com.qualityshop.entity.UserShareEntity">
+        insert into user_share( <include refid="table_columns" /> )
+        values ( <include refid="entity_properties" /> )
+    </insert>
+
+</mapper>

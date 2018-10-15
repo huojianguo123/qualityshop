@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qualityshop.dao.UserConcernDao">
+
+    <resultMap type="com.qualityshop.entity.UserConcernEntity" id="UserConcernEntity">
+        <result property="concernId" column="concernId"/>
+        <result property="userId" column="userId"/>
+        <result property="attentionUserId" column="attentionUserId"/>
+        <result property="isConcern" column="isConcern"/>
+        <result property="concernCount" column="concernCount"/>
+        <result property="create_time" column="create_time"/>
+        <result property="from_thumb_img" column="from_thumb_img"/>
+        <result property="from_nickname" column="from_nickname"/>
+
+    </resultMap>
+    <sql id="table_columns">
+        concernId,
+        userId,
+        attentionUserId,
+        isConcern,
+        concernCount,
+        create_time,
+        from_thumb_img,
+        from_nickname
+    </sql>
+    <sql id="entity_properties">
+        #{concernId},
+        #{userId},
+        #{attentionUserId},
+        #{isConcern},
+        #{concernCount},
+        #{create_time},
+        #{from_thumb_img},
+        #{from_nickname}
+    </sql>
+    <select id="queryByConcern" resultMap="UserConcernEntity" parameterType="String">
+       select concernId,userId,attentionUserId,isConcern,concernCount,create_time,from_thumb_img,from_nickname
+        from user_concern
+        where userId = #{userId}
+          order by create_time DESC
+    </select>
+
+    <select id="queryByConcernAll" resultMap="UserConcernEntity" >
+        select concernId,userId,attentionUserId,isConcern,concernCount,create_time,from_thumb_img,from_nickname
+        from user_concern
+         order by create_time DESC
+    </select>
+    <select id="queryByConcernCount" resultMap="UserConcernEntity" >
+        select concernId,userId,attentionUserId,isConcern,concernCount,create_time,from_thumb_img,from_nickname
+        from user_concern
+        order by create_time DESC
+        limit #{param1},#{param2}
+    </select>
+    <select id="queryByConcernCountId" resultMap="UserConcernEntity" >
+        select concernId,userId,attentionUserId,isConcern,concernCount,create_time,from_thumb_img,from_nickname
+        from user_concern
+         where userId = #{userId}
+        order by create_time DESC
+        limit #{offset},#{end}
+    </select>
+
+    <insert id="insertByConcern" parameterType="com.qualityshop.entity.UserConcernEntity">
+        insert into user_concern( <include refid="table_columns" /> )
+        values ( <include refid="entity_properties" /> )
+    </insert>
+
+</mapper>

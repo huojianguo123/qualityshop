@@ -1,0 +1,307 @@
+2018-10-11 00:00:01,220 [INFO] [QualityshopScheduler_Worker-7] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 53] 任务准备执行，任务ID：1
+2018-10-11 00:00:01,228 [INFO] [pool-7-thread-1] com.qualityshop.modules.job.task.TestTask [TestTask.java : 27] 我是带参数的test方法，正在被执行，参数为：qualityshop
+2018-10-11 00:00:02,229 [DEBUG] [pool-7-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT user_id AS userId,username,`password`,salt,email,mobile,`status`,create_time AS createTime,dept_id AS deptId FROM sys_user WHERE user_id=? 
+2018-10-11 00:00:02,229 [DEBUG] [pool-7-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long)
+2018-10-11 00:00:02,341 [DEBUG] [pool-7-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] <==      Total: 1
+2018-10-11 00:00:02,342 [INFO] [QualityshopScheduler_Worker-7] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 66] 任务执行完毕，任务ID：1  总共耗时：1122毫秒
+2018-10-11 00:00:02,402 [DEBUG] [QualityshopScheduler_Worker-7] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==>  Preparing: INSERT INTO schedule_job_log ( job_id, bean_name, method_name, params, `status`, times, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2018-10-11 00:00:02,403 [DEBUG] [QualityshopScheduler_Worker-7] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long), testTask(String), test(String), qualityshop(String), 0(Integer), 1122(Integer), 2018-10-11 00:00:01.22(Timestamp)
+2018-10-11 00:00:02,507 [DEBUG] [QualityshopScheduler_Worker-7] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] <==    Updates: 1
+2018-10-11 00:30:00,427 [INFO] [QualityshopScheduler_Worker-8] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 53] 任务准备执行，任务ID：1
+2018-10-11 00:30:00,428 [INFO] [pool-9-thread-1] com.qualityshop.modules.job.task.TestTask [TestTask.java : 27] 我是带参数的test方法，正在被执行，参数为：qualityshop
+2018-10-11 00:30:01,430 [DEBUG] [pool-9-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT user_id AS userId,username,`password`,salt,email,mobile,`status`,create_time AS createTime,dept_id AS deptId FROM sys_user WHERE user_id=? 
+2018-10-11 00:30:01,431 [DEBUG] [pool-9-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long)
+2018-10-11 00:30:01,531 [DEBUG] [pool-9-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] <==      Total: 1
+2018-10-11 00:30:01,533 [INFO] [QualityshopScheduler_Worker-8] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 66] 任务执行完毕，任务ID：1  总共耗时：1106毫秒
+2018-10-11 00:30:01,588 [DEBUG] [QualityshopScheduler_Worker-8] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==>  Preparing: INSERT INTO schedule_job_log ( job_id, bean_name, method_name, params, `status`, times, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2018-10-11 00:30:01,589 [DEBUG] [QualityshopScheduler_Worker-8] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long), testTask(String), test(String), qualityshop(String), 0(Integer), 1106(Integer), 2018-10-11 00:30:00.427(Timestamp)
+2018-10-11 00:30:01,679 [DEBUG] [QualityshopScheduler_Worker-8] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] <==    Updates: 1
+2018-10-11 00:39:16,747 [INFO] [SessionValidationThread-1] o.apache.shiro.session.mgt.AbstractValidatingSessionManager [AbstractValidatingSessionManager.java : 275] Validating all active sessions...
+2018-10-11 00:39:16,747 [INFO] [SessionValidationThread-1] o.apache.shiro.session.mgt.AbstractValidatingSessionManager [AbstractValidatingSessionManager.java : 308] Finished session validation.  No sessions were stopped.
+2018-10-11 01:00:00,499 [INFO] [QualityshopScheduler_Worker-9] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 53] 任务准备执行，任务ID：1
+2018-10-11 01:00:00,500 [INFO] [pool-10-thread-1] com.qualityshop.modules.job.task.TestTask [TestTask.java : 27] 我是带参数的test方法，正在被执行，参数为：qualityshop
+2018-10-11 01:00:01,501 [DEBUG] [pool-10-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT user_id AS userId,username,`password`,salt,email,mobile,`status`,create_time AS createTime,dept_id AS deptId FROM sys_user WHERE user_id=? 
+2018-10-11 01:00:01,502 [DEBUG] [pool-10-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long)
+2018-10-11 01:00:01,607 [DEBUG] [pool-10-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] <==      Total: 1
+2018-10-11 01:00:01,608 [INFO] [QualityshopScheduler_Worker-9] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 66] 任务执行完毕，任务ID：1  总共耗时：1109毫秒
+2018-10-11 01:00:01,674 [DEBUG] [QualityshopScheduler_Worker-9] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==>  Preparing: INSERT INTO schedule_job_log ( job_id, bean_name, method_name, params, `status`, times, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2018-10-11 01:00:01,675 [DEBUG] [QualityshopScheduler_Worker-9] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long), testTask(String), test(String), qualityshop(String), 0(Integer), 1109(Integer), 2018-10-11 01:00:00.499(Timestamp)
+2018-10-11 01:00:01,781 [DEBUG] [QualityshopScheduler_Worker-9] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] <==    Updates: 1
+2018-10-11 01:30:00,524 [INFO] [QualityshopScheduler_Worker-10] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 53] 任务准备执行，任务ID：1
+2018-10-11 01:30:00,525 [INFO] [pool-11-thread-1] com.qualityshop.modules.job.task.TestTask [TestTask.java : 27] 我是带参数的test方法，正在被执行，参数为：qualityshop
+2018-10-11 01:30:01,526 [DEBUG] [pool-11-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT user_id AS userId,username,`password`,salt,email,mobile,`status`,create_time AS createTime,dept_id AS deptId FROM sys_user WHERE user_id=? 
+2018-10-11 01:30:01,527 [DEBUG] [pool-11-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long)
+2018-10-11 01:30:01,637 [DEBUG] [pool-11-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] <==      Total: 1
+2018-10-11 01:30:01,638 [INFO] [QualityshopScheduler_Worker-10] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 66] 任务执行完毕，任务ID：1  总共耗时：1114毫秒
+2018-10-11 01:30:01,701 [DEBUG] [QualityshopScheduler_Worker-10] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==>  Preparing: INSERT INTO schedule_job_log ( job_id, bean_name, method_name, params, `status`, times, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2018-10-11 01:30:01,702 [DEBUG] [QualityshopScheduler_Worker-10] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long), testTask(String), test(String), qualityshop(String), 0(Integer), 1114(Integer), 2018-10-11 01:30:00.524(Timestamp)
+2018-10-11 01:30:01,806 [DEBUG] [QualityshopScheduler_Worker-10] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] <==    Updates: 1
+2018-10-11 01:39:16,746 [INFO] [SessionValidationThread-1] o.apache.shiro.session.mgt.AbstractValidatingSessionManager [AbstractValidatingSessionManager.java : 275] Validating all active sessions...
+2018-10-11 01:39:16,746 [INFO] [SessionValidationThread-1] o.apache.shiro.session.mgt.AbstractValidatingSessionManager [AbstractValidatingSessionManager.java : 308] Finished session validation.  No sessions were stopped.
+2018-10-11 02:00:00,503 [INFO] [QualityshopScheduler_Worker-11] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 53] 任务准备执行，任务ID：1
+2018-10-11 02:00:00,504 [INFO] [pool-12-thread-1] com.qualityshop.modules.job.task.TestTask [TestTask.java : 27] 我是带参数的test方法，正在被执行，参数为：qualityshop
+2018-10-11 02:00:01,505 [DEBUG] [pool-12-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT user_id AS userId,username,`password`,salt,email,mobile,`status`,create_time AS createTime,dept_id AS deptId FROM sys_user WHERE user_id=? 
+2018-10-11 02:00:01,506 [DEBUG] [pool-12-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long)
+2018-10-11 02:00:01,617 [DEBUG] [pool-12-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] <==      Total: 1
+2018-10-11 02:00:01,620 [INFO] [QualityshopScheduler_Worker-11] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 66] 任务执行完毕，任务ID：1  总共耗时：1117毫秒
+2018-10-11 02:00:01,680 [DEBUG] [QualityshopScheduler_Worker-11] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==>  Preparing: INSERT INTO schedule_job_log ( job_id, bean_name, method_name, params, `status`, times, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2018-10-11 02:00:01,682 [DEBUG] [QualityshopScheduler_Worker-11] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long), testTask(String), test(String), qualityshop(String), 0(Integer), 1117(Integer), 2018-10-11 02:00:00.503(Timestamp)
+2018-10-11 02:00:01,786 [DEBUG] [QualityshopScheduler_Worker-11] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] <==    Updates: 1
+2018-10-11 02:30:00,422 [INFO] [QualityshopScheduler_Worker-12] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 53] 任务准备执行，任务ID：1
+2018-10-11 02:30:00,423 [INFO] [pool-13-thread-1] com.qualityshop.modules.job.task.TestTask [TestTask.java : 27] 我是带参数的test方法，正在被执行，参数为：qualityshop
+2018-10-11 02:30:01,424 [DEBUG] [pool-13-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT user_id AS userId,username,`password`,salt,email,mobile,`status`,create_time AS createTime,dept_id AS deptId FROM sys_user WHERE user_id=? 
+2018-10-11 02:30:01,424 [DEBUG] [pool-13-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long)
+2018-10-11 02:30:01,517 [DEBUG] [pool-13-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] <==      Total: 1
+2018-10-11 02:30:01,518 [INFO] [QualityshopScheduler_Worker-12] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 66] 任务执行完毕，任务ID：1  总共耗时：1096毫秒
+2018-10-11 02:30:01,585 [DEBUG] [QualityshopScheduler_Worker-12] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==>  Preparing: INSERT INTO schedule_job_log ( job_id, bean_name, method_name, params, `status`, times, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2018-10-11 02:30:01,586 [DEBUG] [QualityshopScheduler_Worker-12] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long), testTask(String), test(String), qualityshop(String), 0(Integer), 1096(Integer), 2018-10-11 02:30:00.422(Timestamp)
+2018-10-11 02:30:01,693 [DEBUG] [QualityshopScheduler_Worker-12] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] <==    Updates: 1
+2018-10-11 02:39:16,745 [INFO] [SessionValidationThread-1] o.apache.shiro.session.mgt.AbstractValidatingSessionManager [AbstractValidatingSessionManager.java : 275] Validating all active sessions...
+2018-10-11 02:39:16,745 [INFO] [SessionValidationThread-1] o.apache.shiro.session.mgt.AbstractValidatingSessionManager [AbstractValidatingSessionManager.java : 308] Finished session validation.  No sessions were stopped.
+2018-10-11 03:00:00,496 [INFO] [QualityshopScheduler_Worker-13] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 53] 任务准备执行，任务ID：1
+2018-10-11 03:00:00,497 [INFO] [pool-14-thread-1] com.qualityshop.modules.job.task.TestTask [TestTask.java : 27] 我是带参数的test方法，正在被执行，参数为：qualityshop
+2018-10-11 03:00:01,498 [DEBUG] [pool-14-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT user_id AS userId,username,`password`,salt,email,mobile,`status`,create_time AS createTime,dept_id AS deptId FROM sys_user WHERE user_id=? 
+2018-10-11 03:00:01,498 [DEBUG] [pool-14-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long)
+2018-10-11 03:00:01,601 [DEBUG] [pool-14-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] <==      Total: 1
+2018-10-11 03:00:01,601 [INFO] [QualityshopScheduler_Worker-13] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 66] 任务执行完毕，任务ID：1  总共耗时：1105毫秒
+2018-10-11 03:00:01,661 [DEBUG] [QualityshopScheduler_Worker-13] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==>  Preparing: INSERT INTO schedule_job_log ( job_id, bean_name, method_name, params, `status`, times, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2018-10-11 03:00:01,662 [DEBUG] [QualityshopScheduler_Worker-13] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long), testTask(String), test(String), qualityshop(String), 0(Integer), 1105(Integer), 2018-10-11 03:00:00.496(Timestamp)
+2018-10-11 03:00:01,769 [DEBUG] [QualityshopScheduler_Worker-13] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] <==    Updates: 1
+2018-10-11 03:30:00,505 [INFO] [QualityshopScheduler_Worker-14] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 53] 任务准备执行，任务ID：1
+2018-10-11 03:30:00,506 [INFO] [pool-15-thread-1] com.qualityshop.modules.job.task.TestTask [TestTask.java : 27] 我是带参数的test方法，正在被执行，参数为：qualityshop
+2018-10-11 03:30:01,507 [DEBUG] [pool-15-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT user_id AS userId,username,`password`,salt,email,mobile,`status`,create_time AS createTime,dept_id AS deptId FROM sys_user WHERE user_id=? 
+2018-10-11 03:30:01,508 [DEBUG] [pool-15-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long)
+2018-10-11 03:30:01,613 [DEBUG] [pool-15-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] <==      Total: 1
+2018-10-11 03:30:01,614 [INFO] [QualityshopScheduler_Worker-14] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 66] 任务执行完毕，任务ID：1  总共耗时：1109毫秒
+2018-10-11 03:30:01,677 [DEBUG] [QualityshopScheduler_Worker-14] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==>  Preparing: INSERT INTO schedule_job_log ( job_id, bean_name, method_name, params, `status`, times, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2018-10-11 03:30:01,678 [DEBUG] [QualityshopScheduler_Worker-14] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long), testTask(String), test(String), qualityshop(String), 0(Integer), 1109(Integer), 2018-10-11 03:30:00.505(Timestamp)
+2018-10-11 03:30:01,783 [DEBUG] [QualityshopScheduler_Worker-14] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] <==    Updates: 1
+2018-10-11 03:39:16,745 [INFO] [SessionValidationThread-1] o.apache.shiro.session.mgt.AbstractValidatingSessionManager [AbstractValidatingSessionManager.java : 275] Validating all active sessions...
+2018-10-11 03:39:16,745 [INFO] [SessionValidationThread-1] o.apache.shiro.session.mgt.AbstractValidatingSessionManager [AbstractValidatingSessionManager.java : 308] Finished session validation.  No sessions were stopped.
+2018-10-11 04:00:00,524 [INFO] [QualityshopScheduler_Worker-15] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 53] 任务准备执行，任务ID：1
+2018-10-11 04:00:00,525 [INFO] [pool-16-thread-1] com.qualityshop.modules.job.task.TestTask [TestTask.java : 27] 我是带参数的test方法，正在被执行，参数为：qualityshop
+2018-10-11 04:00:01,525 [DEBUG] [pool-16-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT user_id AS userId,username,`password`,salt,email,mobile,`status`,create_time AS createTime,dept_id AS deptId FROM sys_user WHERE user_id=? 
+2018-10-11 04:00:01,527 [DEBUG] [pool-16-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long)
+2018-10-11 04:00:01,659 [DEBUG] [pool-16-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] <==      Total: 1
+2018-10-11 04:00:01,661 [INFO] [QualityshopScheduler_Worker-15] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 66] 任务执行完毕，任务ID：1  总共耗时：1137毫秒
+2018-10-11 04:00:01,748 [DEBUG] [QualityshopScheduler_Worker-15] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==>  Preparing: INSERT INTO schedule_job_log ( job_id, bean_name, method_name, params, `status`, times, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2018-10-11 04:00:01,749 [DEBUG] [QualityshopScheduler_Worker-15] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long), testTask(String), test(String), qualityshop(String), 0(Integer), 1137(Integer), 2018-10-11 04:00:00.524(Timestamp)
+2018-10-11 04:00:01,859 [DEBUG] [QualityshopScheduler_Worker-15] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] <==    Updates: 1
+2018-10-11 04:13:33,579 [ERROR] [QuartzScheduler_QualityshopScheduler-DESKTOP-TLNGCTM1539175148580_MisfireHandler] com.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 1602] discard connection
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 308 milliseconds ago.  The last packet sent successfully to the server was 308 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2547)
+	at com.mysql.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:4874)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_setAutoCommit(FilterChainImpl.java:738)
+	at com.alibaba.druid.filter.FilterAdapter.connection_setAutoCommit(FilterAdapter.java:985)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_setAutoCommit(FilterChainImpl.java:733)
+	at com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl.setAutoCommit(ConnectionProxyImpl.java:430)
+	at com.alibaba.druid.pool.DruidPooledConnection.setAutoCommit(DruidPooledConnection.java:712)
+	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.restoreOriginalAtributes(AttributeRestoringConnectionInvocationHandler.java:141)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.cleanupConnection(JobStoreSupport.java:3662)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3268)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:3997)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4018)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:209)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:100)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:143)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:173)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2954)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375)
+	... 16 common frames omitted
+2018-10-11 04:13:33,580 [WARN] [QuartzScheduler_QualityshopScheduler-DESKTOP-TLNGCTM1539175148580_MisfireHandler] o.q.i.j.AttributeRestoringConnectionInvocationHandler [AttributeRestoringConnectionInvocationHandler.java : 144] Failed restore connection's original auto commit setting.
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 308 milliseconds ago.  The last packet sent successfully to the server was 308 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3465)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3365)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3805)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2547)
+	at com.mysql.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:4874)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_setAutoCommit(FilterChainImpl.java:738)
+	at com.alibaba.druid.filter.FilterAdapter.connection_setAutoCommit(FilterAdapter.java:985)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_setAutoCommit(FilterChainImpl.java:733)
+	at com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl.setAutoCommit(ConnectionProxyImpl.java:430)
+	at com.alibaba.druid.pool.DruidPooledConnection.setAutoCommit(DruidPooledConnection.java:712)
+	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.restoreOriginalAtributes(AttributeRestoringConnectionInvocationHandler.java:141)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.cleanupConnection(JobStoreSupport.java:3662)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3268)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:3997)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4018)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:209)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:100)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:143)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:173)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2954)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3375)
+	... 16 common frames omitted
+2018-10-11 04:30:00,500 [INFO] [QualityshopScheduler_Worker-16] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 53] 任务准备执行，任务ID：1
+2018-10-11 04:30:00,502 [INFO] [pool-17-thread-1] com.qualityshop.modules.job.task.TestTask [TestTask.java : 27] 我是带参数的test方法，正在被执行，参数为：qualityshop
+2018-10-11 04:30:01,504 [DEBUG] [pool-17-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT user_id AS userId,username,`password`,salt,email,mobile,`status`,create_time AS createTime,dept_id AS deptId FROM sys_user WHERE user_id=? 
+2018-10-11 04:30:01,505 [DEBUG] [pool-17-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long)
+2018-10-11 04:30:01,619 [DEBUG] [pool-17-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] <==      Total: 1
+2018-10-11 04:30:01,620 [INFO] [QualityshopScheduler_Worker-16] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 66] 任务执行完毕，任务ID：1  总共耗时：1120毫秒
+2018-10-11 04:30:01,681 [DEBUG] [QualityshopScheduler_Worker-16] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==>  Preparing: INSERT INTO schedule_job_log ( job_id, bean_name, method_name, params, `status`, times, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2018-10-11 04:30:01,682 [DEBUG] [QualityshopScheduler_Worker-16] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long), testTask(String), test(String), qualityshop(String), 0(Integer), 1120(Integer), 2018-10-11 04:30:00.5(Timestamp)
+2018-10-11 04:30:01,785 [DEBUG] [QualityshopScheduler_Worker-16] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] <==    Updates: 1
+2018-10-11 04:39:16,746 [INFO] [SessionValidationThread-1] o.apache.shiro.session.mgt.AbstractValidatingSessionManager [AbstractValidatingSessionManager.java : 275] Validating all active sessions...
+2018-10-11 04:39:16,746 [INFO] [SessionValidationThread-1] o.apache.shiro.session.mgt.AbstractValidatingSessionManager [AbstractValidatingSessionManager.java : 308] Finished session validation.  No sessions were stopped.
+2018-10-11 05:00:00,514 [INFO] [QualityshopScheduler_Worker-17] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 53] 任务准备执行，任务ID：1
+2018-10-11 05:00:00,515 [INFO] [pool-18-thread-1] com.qualityshop.modules.job.task.TestTask [TestTask.java : 27] 我是带参数的test方法，正在被执行，参数为：qualityshop
+2018-10-11 05:00:01,515 [DEBUG] [pool-18-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT user_id AS userId,username,`password`,salt,email,mobile,`status`,create_time AS createTime,dept_id AS deptId FROM sys_user WHERE user_id=? 
+2018-10-11 05:00:01,516 [DEBUG] [pool-18-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long)
+2018-10-11 05:00:01,630 [DEBUG] [pool-18-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] <==      Total: 1
+2018-10-11 05:00:01,631 [INFO] [QualityshopScheduler_Worker-17] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 66] 任务执行完毕，任务ID：1  总共耗时：1117毫秒
+2018-10-11 05:00:01,690 [DEBUG] [QualityshopScheduler_Worker-17] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==>  Preparing: INSERT INTO schedule_job_log ( job_id, bean_name, method_name, params, `status`, times, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2018-10-11 05:00:01,692 [DEBUG] [QualityshopScheduler_Worker-17] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long), testTask(String), test(String), qualityshop(String), 0(Integer), 1117(Integer), 2018-10-11 05:00:00.514(Timestamp)
+2018-10-11 05:00:01,794 [DEBUG] [QualityshopScheduler_Worker-17] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] <==    Updates: 1
+2018-10-11 05:30:00,438 [INFO] [QualityshopScheduler_Worker-18] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 53] 任务准备执行，任务ID：1
+2018-10-11 05:30:00,439 [INFO] [pool-19-thread-1] com.qualityshop.modules.job.task.TestTask [TestTask.java : 27] 我是带参数的test方法，正在被执行，参数为：qualityshop
+2018-10-11 05:30:01,440 [DEBUG] [pool-19-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT user_id AS userId,username,`password`,salt,email,mobile,`status`,create_time AS createTime,dept_id AS deptId FROM sys_user WHERE user_id=? 
+2018-10-11 05:30:01,440 [DEBUG] [pool-19-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long)
+2018-10-11 05:30:01,535 [DEBUG] [pool-19-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] <==      Total: 1
+2018-10-11 05:30:01,535 [INFO] [QualityshopScheduler_Worker-18] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 66] 任务执行完毕，任务ID：1  总共耗时：1097毫秒
+2018-10-11 05:30:01,586 [DEBUG] [QualityshopScheduler_Worker-18] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==>  Preparing: INSERT INTO schedule_job_log ( job_id, bean_name, method_name, params, `status`, times, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2018-10-11 05:30:01,587 [DEBUG] [QualityshopScheduler_Worker-18] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long), testTask(String), test(String), qualityshop(String), 0(Integer), 1097(Integer), 2018-10-11 05:30:00.438(Timestamp)
+2018-10-11 05:30:01,677 [DEBUG] [QualityshopScheduler_Worker-18] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] <==    Updates: 1
+2018-10-11 05:39:16,745 [INFO] [SessionValidationThread-1] o.apache.shiro.session.mgt.AbstractValidatingSessionManager [AbstractValidatingSessionManager.java : 275] Validating all active sessions...
+2018-10-11 05:39:16,745 [INFO] [SessionValidationThread-1] o.apache.shiro.session.mgt.AbstractValidatingSessionManager [AbstractValidatingSessionManager.java : 308] Finished session validation.  No sessions were stopped.
+2018-10-11 06:00:00,515 [INFO] [QualityshopScheduler_Worker-19] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 53] 任务准备执行，任务ID：1
+2018-10-11 06:00:00,516 [INFO] [pool-20-thread-1] com.qualityshop.modules.job.task.TestTask [TestTask.java : 27] 我是带参数的test方法，正在被执行，参数为：qualityshop
+2018-10-11 06:00:01,517 [DEBUG] [pool-20-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT user_id AS userId,username,`password`,salt,email,mobile,`status`,create_time AS createTime,dept_id AS deptId FROM sys_user WHERE user_id=? 
+2018-10-11 06:00:01,518 [DEBUG] [pool-20-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long)
+2018-10-11 06:00:01,620 [DEBUG] [pool-20-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] <==      Total: 1
+2018-10-11 06:00:01,620 [INFO] [QualityshopScheduler_Worker-19] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 66] 任务执行完毕，任务ID：1  总共耗时：1105毫秒
+2018-10-11 06:00:01,679 [DEBUG] [QualityshopScheduler_Worker-19] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==>  Preparing: INSERT INTO schedule_job_log ( job_id, bean_name, method_name, params, `status`, times, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2018-10-11 06:00:01,679 [DEBUG] [QualityshopScheduler_Worker-19] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long), testTask(String), test(String), qualityshop(String), 0(Integer), 1105(Integer), 2018-10-11 06:00:00.515(Timestamp)
+2018-10-11 06:00:01,782 [DEBUG] [QualityshopScheduler_Worker-19] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] <==    Updates: 1
+2018-10-11 06:30:00,499 [INFO] [QualityshopScheduler_Worker-20] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 53] 任务准备执行，任务ID：1
+2018-10-11 06:30:00,499 [INFO] [pool-21-thread-1] com.qualityshop.modules.job.task.TestTask [TestTask.java : 27] 我是带参数的test方法，正在被执行，参数为：qualityshop
+2018-10-11 06:30:01,501 [DEBUG] [pool-21-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT user_id AS userId,username,`password`,salt,email,mobile,`status`,create_time AS createTime,dept_id AS deptId FROM sys_user WHERE user_id=? 
+2018-10-11 06:30:01,502 [DEBUG] [pool-21-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long)
+2018-10-11 06:30:01,603 [DEBUG] [pool-21-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] <==      Total: 1
+2018-10-11 06:30:01,604 [INFO] [QualityshopScheduler_Worker-20] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 66] 任务执行完毕，任务ID：1  总共耗时：1105毫秒
+2018-10-11 06:30:01,663 [DEBUG] [QualityshopScheduler_Worker-20] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==>  Preparing: INSERT INTO schedule_job_log ( job_id, bean_name, method_name, params, `status`, times, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2018-10-11 06:30:01,664 [DEBUG] [QualityshopScheduler_Worker-20] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long), testTask(String), test(String), qualityshop(String), 0(Integer), 1105(Integer), 2018-10-11 06:30:00.499(Timestamp)
+2018-10-11 06:30:01,767 [DEBUG] [QualityshopScheduler_Worker-20] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] <==    Updates: 1
+2018-10-11 06:39:16,745 [INFO] [SessionValidationThread-1] o.apache.shiro.session.mgt.AbstractValidatingSessionManager [AbstractValidatingSessionManager.java : 275] Validating all active sessions...
+2018-10-11 06:39:16,745 [INFO] [SessionValidationThread-1] o.apache.shiro.session.mgt.AbstractValidatingSessionManager [AbstractValidatingSessionManager.java : 308] Finished session validation.  No sessions were stopped.
+2018-10-11 07:00:00,503 [INFO] [QualityshopScheduler_Worker-1] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 53] 任务准备执行，任务ID：1
+2018-10-11 07:00:00,504 [INFO] [pool-22-thread-1] com.qualityshop.modules.job.task.TestTask [TestTask.java : 27] 我是带参数的test方法，正在被执行，参数为：qualityshop
+2018-10-11 07:00:01,505 [DEBUG] [pool-22-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT user_id AS userId,username,`password`,salt,email,mobile,`status`,create_time AS createTime,dept_id AS deptId FROM sys_user WHERE user_id=? 
+2018-10-11 07:00:01,506 [DEBUG] [pool-22-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long)
+2018-10-11 07:00:01,614 [DEBUG] [pool-22-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] <==      Total: 1
+2018-10-11 07:00:01,615 [INFO] [QualityshopScheduler_Worker-1] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 66] 任务执行完毕，任务ID：1  总共耗时：1112毫秒
+2018-10-11 07:00:01,680 [DEBUG] [QualityshopScheduler_Worker-1] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==>  Preparing: INSERT INTO schedule_job_log ( job_id, bean_name, method_name, params, `status`, times, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2018-10-11 07:00:01,681 [DEBUG] [QualityshopScheduler_Worker-1] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long), testTask(String), test(String), qualityshop(String), 0(Integer), 1112(Integer), 2018-10-11 07:00:00.503(Timestamp)
+2018-10-11 07:00:01,788 [DEBUG] [QualityshopScheduler_Worker-1] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] <==    Updates: 1
+2018-10-11 07:30:00,432 [INFO] [QualityshopScheduler_Worker-2] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 53] 任务准备执行，任务ID：1
+2018-10-11 07:30:00,433 [INFO] [pool-23-thread-1] com.qualityshop.modules.job.task.TestTask [TestTask.java : 27] 我是带参数的test方法，正在被执行，参数为：qualityshop
+2018-10-11 07:30:01,434 [DEBUG] [pool-23-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT user_id AS userId,username,`password`,salt,email,mobile,`status`,create_time AS createTime,dept_id AS deptId FROM sys_user WHERE user_id=? 
+2018-10-11 07:30:01,434 [DEBUG] [pool-23-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long)
+2018-10-11 07:30:01,522 [DEBUG] [pool-23-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] <==      Total: 1
+2018-10-11 07:30:01,522 [INFO] [QualityshopScheduler_Worker-2] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 66] 任务执行完毕，任务ID：1  总共耗时：1090毫秒
+2018-10-11 07:30:01,586 [DEBUG] [QualityshopScheduler_Worker-2] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==>  Preparing: INSERT INTO schedule_job_log ( job_id, bean_name, method_name, params, `status`, times, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2018-10-11 07:30:01,587 [DEBUG] [QualityshopScheduler_Worker-2] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long), testTask(String), test(String), qualityshop(String), 0(Integer), 1090(Integer), 2018-10-11 07:30:00.432(Timestamp)
+2018-10-11 07:30:01,677 [DEBUG] [QualityshopScheduler_Worker-2] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] <==    Updates: 1
+2018-10-11 07:39:16,745 [INFO] [SessionValidationThread-1] o.apache.shiro.session.mgt.AbstractValidatingSessionManager [AbstractValidatingSessionManager.java : 275] Validating all active sessions...
+2018-10-11 07:39:16,745 [INFO] [SessionValidationThread-1] o.apache.shiro.session.mgt.AbstractValidatingSessionManager [AbstractValidatingSessionManager.java : 308] Finished session validation.  No sessions were stopped.
+2018-10-11 08:00:00,490 [INFO] [QualityshopScheduler_Worker-3] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 53] 任务准备执行，任务ID：1
+2018-10-11 08:00:00,491 [INFO] [pool-24-thread-1] com.qualityshop.modules.job.task.TestTask [TestTask.java : 27] 我是带参数的test方法，正在被执行，参数为：qualityshop
+2018-10-11 08:00:01,492 [DEBUG] [pool-24-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT user_id AS userId,username,`password`,salt,email,mobile,`status`,create_time AS createTime,dept_id AS deptId FROM sys_user WHERE user_id=? 
+2018-10-11 08:00:01,493 [DEBUG] [pool-24-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long)
+2018-10-11 08:00:01,596 [DEBUG] [pool-24-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] <==      Total: 1
+2018-10-11 08:00:01,597 [INFO] [QualityshopScheduler_Worker-3] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 66] 任务执行完毕，任务ID：1  总共耗时：1107毫秒
+2018-10-11 08:00:01,654 [DEBUG] [QualityshopScheduler_Worker-3] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==>  Preparing: INSERT INTO schedule_job_log ( job_id, bean_name, method_name, params, `status`, times, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2018-10-11 08:00:01,655 [DEBUG] [QualityshopScheduler_Worker-3] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long), testTask(String), test(String), qualityshop(String), 0(Integer), 1107(Integer), 2018-10-11 08:00:00.49(Timestamp)
+2018-10-11 08:00:01,762 [DEBUG] [QualityshopScheduler_Worker-3] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] <==    Updates: 1
+2018-10-11 08:30:00,510 [INFO] [QualityshopScheduler_Worker-4] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 53] 任务准备执行，任务ID：1
+2018-10-11 08:30:00,511 [INFO] [pool-25-thread-1] com.qualityshop.modules.job.task.TestTask [TestTask.java : 27] 我是带参数的test方法，正在被执行，参数为：qualityshop
+2018-10-11 08:30:01,511 [DEBUG] [pool-25-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT user_id AS userId,username,`password`,salt,email,mobile,`status`,create_time AS createTime,dept_id AS deptId FROM sys_user WHERE user_id=? 
+2018-10-11 08:30:01,512 [DEBUG] [pool-25-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long)
+2018-10-11 08:30:01,619 [DEBUG] [pool-25-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] <==      Total: 1
+2018-10-11 08:30:01,620 [INFO] [QualityshopScheduler_Worker-4] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 66] 任务执行完毕，任务ID：1  总共耗时：1110毫秒
+2018-10-11 08:30:01,680 [DEBUG] [QualityshopScheduler_Worker-4] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==>  Preparing: INSERT INTO schedule_job_log ( job_id, bean_name, method_name, params, `status`, times, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2018-10-11 08:30:01,680 [DEBUG] [QualityshopScheduler_Worker-4] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long), testTask(String), test(String), qualityshop(String), 0(Integer), 1110(Integer), 2018-10-11 08:30:00.51(Timestamp)
+2018-10-11 08:30:01,785 [DEBUG] [QualityshopScheduler_Worker-4] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] <==    Updates: 1
+2018-10-11 08:39:16,746 [INFO] [SessionValidationThread-1] o.apache.shiro.session.mgt.AbstractValidatingSessionManager [AbstractValidatingSessionManager.java : 275] Validating all active sessions...
+2018-10-11 08:39:16,746 [INFO] [SessionValidationThread-1] o.apache.shiro.session.mgt.AbstractValidatingSessionManager [AbstractValidatingSessionManager.java : 308] Finished session validation.  No sessions were stopped.
+2018-10-11 09:00:00,580 [INFO] [QualityshopScheduler_Worker-5] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 53] 任务准备执行，任务ID：1
+2018-10-11 09:00:00,581 [INFO] [pool-26-thread-1] com.qualityshop.modules.job.task.TestTask [TestTask.java : 27] 我是带参数的test方法，正在被执行，参数为：qualityshop
+2018-10-11 09:00:01,583 [DEBUG] [pool-26-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT user_id AS userId,username,`password`,salt,email,mobile,`status`,create_time AS createTime,dept_id AS deptId FROM sys_user WHERE user_id=? 
+2018-10-11 09:00:01,584 [DEBUG] [pool-26-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long)
+2018-10-11 09:00:01,688 [DEBUG] [pool-26-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] <==      Total: 1
+2018-10-11 09:00:01,689 [INFO] [QualityshopScheduler_Worker-5] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 66] 任务执行完毕，任务ID：1  总共耗时：1109毫秒
+2018-10-11 09:00:01,749 [DEBUG] [QualityshopScheduler_Worker-5] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==>  Preparing: INSERT INTO schedule_job_log ( job_id, bean_name, method_name, params, `status`, times, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2018-10-11 09:00:01,749 [DEBUG] [QualityshopScheduler_Worker-5] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long), testTask(String), test(String), qualityshop(String), 0(Integer), 1109(Integer), 2018-10-11 09:00:00.58(Timestamp)
+2018-10-11 09:00:01,847 [DEBUG] [QualityshopScheduler_Worker-5] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] <==    Updates: 1
+2018-10-11 09:30:00,848 [INFO] [QualityshopScheduler_Worker-6] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 53] 任务准备执行，任务ID：1
+2018-10-11 09:30:00,848 [INFO] [pool-27-thread-1] com.qualityshop.modules.job.task.TestTask [TestTask.java : 27] 我是带参数的test方法，正在被执行，参数为：qualityshop
+2018-10-11 09:30:01,851 [DEBUG] [pool-27-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT user_id AS userId,username,`password`,salt,email,mobile,`status`,create_time AS createTime,dept_id AS deptId FROM sys_user WHERE user_id=? 
+2018-10-11 09:30:01,852 [DEBUG] [pool-27-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long)
+2018-10-11 09:30:01,957 [DEBUG] [pool-27-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] <==      Total: 1
+2018-10-11 09:30:01,958 [INFO] [QualityshopScheduler_Worker-6] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 66] 任务执行完毕，任务ID：1  总共耗时：1110毫秒
+2018-10-11 09:30:02,011 [DEBUG] [QualityshopScheduler_Worker-6] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==>  Preparing: INSERT INTO schedule_job_log ( job_id, bean_name, method_name, params, `status`, times, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2018-10-11 09:30:02,011 [DEBUG] [QualityshopScheduler_Worker-6] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long), testTask(String), test(String), qualityshop(String), 0(Integer), 1110(Integer), 2018-10-11 09:30:00.848(Timestamp)
+2018-10-11 09:30:02,130 [DEBUG] [QualityshopScheduler_Worker-6] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] <==    Updates: 1
+2018-10-11 09:39:16,746 [INFO] [SessionValidationThread-1] o.apache.shiro.session.mgt.AbstractValidatingSessionManager [AbstractValidatingSessionManager.java : 275] Validating all active sessions...
+2018-10-11 09:39:16,747 [INFO] [SessionValidationThread-1] o.apache.shiro.session.mgt.AbstractValidatingSessionManager [AbstractValidatingSessionManager.java : 308] Finished session validation.  No sessions were stopped.
+2018-10-11 10:00:00,457 [INFO] [QualityshopScheduler_Worker-7] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 53] 任务准备执行，任务ID：1
+2018-10-11 10:00:00,458 [INFO] [pool-28-thread-1] com.qualityshop.modules.job.task.TestTask [TestTask.java : 27] 我是带参数的test方法，正在被执行，参数为：qualityshop
+2018-10-11 10:00:01,459 [DEBUG] [pool-28-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT user_id AS userId,username,`password`,salt,email,mobile,`status`,create_time AS createTime,dept_id AS deptId FROM sys_user WHERE user_id=? 
+2018-10-11 10:00:01,459 [DEBUG] [pool-28-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long)
+2018-10-11 10:00:01,540 [DEBUG] [pool-28-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] <==      Total: 1
+2018-10-11 10:00:01,541 [INFO] [QualityshopScheduler_Worker-7] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 66] 任务执行完毕，任务ID：1  总共耗时：1084毫秒
+2018-10-11 10:00:01,655 [DEBUG] [QualityshopScheduler_Worker-7] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==>  Preparing: INSERT INTO schedule_job_log ( job_id, bean_name, method_name, params, `status`, times, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2018-10-11 10:00:01,655 [DEBUG] [QualityshopScheduler_Worker-7] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long), testTask(String), test(String), qualityshop(String), 0(Integer), 1084(Integer), 2018-10-11 10:00:00.457(Timestamp)
+2018-10-11 10:00:01,737 [DEBUG] [QualityshopScheduler_Worker-7] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] <==    Updates: 1
+2018-10-11 10:03:14,706 [ERROR] [QualityshopScheduler_QuartzSchedulerThread] com.alibaba.druid.filter.stat.StatFilter [StatFilter.java : 478] slow sql 2539 millis. SELECT TRIGGER_NAME, TRIGGER_GROUP, NEXT_FIRE_TIME, PRIORITY FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'QualityshopScheduler' AND TRIGGER_STATE = ? AND NEXT_FIRE_TIME <= ? AND (MISFIRE_INSTR = -1 OR (MISFIRE_INSTR != -1 AND NEXT_FIRE_TIME >= ?)) ORDER BY NEXT_FIRE_TIME ASC, PRIORITY DESC["WAITING",1539223421742,1539223380126]
+2018-10-11 10:03:49,404 [ERROR] [QuartzScheduler_QualityshopScheduler-DESKTOP-TLNGCTM1539175148580_MisfireHandler] com.alibaba.druid.filter.stat.StatFilter [StatFilter.java : 478] slow sql 2329 millis. SELECT COUNT(TRIGGER_NAME) FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'QualityshopScheduler' AND NOT (MISFIRE_INSTR = -1) AND NEXT_FIRE_TIME < ? AND TRIGGER_STATE = ?[1539223415075,"WAITING"]
+2018-10-11 10:04:01,031 [ERROR] [QuartzScheduler_QualityshopScheduler-DESKTOP-TLNGCTM1539175148580_MisfireHandler] com.alibaba.druid.filter.stat.StatFilter [StatFilter.java : 478] slow sql 1361 millis. SELECT COUNT(TRIGGER_NAME) FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'QualityshopScheduler' AND NOT (MISFIRE_INSTR = -1) AND NEXT_FIRE_TIME < ? AND TRIGGER_STATE = ?[1539223427670,"WAITING"]
+2018-10-11 10:04:11,124 [ERROR] [QualityshopScheduler_QuartzSchedulerThread] com.alibaba.druid.filter.stat.StatFilter [StatFilter.java : 478] slow sql 1855 millis. SELECT TRIGGER_NAME, TRIGGER_GROUP, NEXT_FIRE_TIME, PRIORITY FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'QualityshopScheduler' AND TRIGGER_STATE = ? AND NEXT_FIRE_TIME <= ? AND (MISFIRE_INSTR = -1 OR (MISFIRE_INSTR != -1 AND NEXT_FIRE_TIME >= ?)) ORDER BY NEXT_FIRE_TIME ASC, PRIORITY DESC["WAITING",1539223478254,1539223437269]
+2018-10-11 10:04:13,033 [ERROR] [QuartzScheduler_QualityshopScheduler-DESKTOP-TLNGCTM1539175148580_MisfireHandler] com.alibaba.druid.filter.stat.StatFilter [StatFilter.java : 478] slow sql 1443 millis. SELECT COUNT(TRIGGER_NAME) FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'QualityshopScheduler' AND NOT (MISFIRE_INSTR = -1) AND NEXT_FIRE_TIME < ? AND TRIGGER_STATE = ?[1539223439589,"WAITING"]
+2018-10-11 10:04:39,840 [ERROR] [QualityshopScheduler_QuartzSchedulerThread] com.alibaba.druid.filter.stat.StatFilter [StatFilter.java : 478] slow sql 1888 millis. SELECT TRIGGER_NAME, TRIGGER_GROUP, NEXT_FIRE_TIME, PRIORITY FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'QualityshopScheduler' AND TRIGGER_STATE = ? AND NEXT_FIRE_TIME <= ? AND (MISFIRE_INSTR = -1 OR (MISFIRE_INSTR != -1 AND NEXT_FIRE_TIME >= ?)) ORDER BY NEXT_FIRE_TIME ASC, PRIORITY DESC["WAITING",1539223507539,1539223465951]
+2018-10-11 10:05:01,294 [ERROR] [QuartzScheduler_QualityshopScheduler-DESKTOP-TLNGCTM1539175148580_MisfireHandler] com.alibaba.druid.filter.stat.StatFilter [StatFilter.java : 478] slow sql 1894 millis. SELECT COUNT(TRIGGER_NAME) FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'QualityshopScheduler' AND NOT (MISFIRE_INSTR = -1) AND NEXT_FIRE_TIME < ? AND TRIGGER_STATE = ?[1539223487399,"WAITING"]
+2018-10-11 10:05:10,192 [ERROR] [QualityshopScheduler_QuartzSchedulerThread] com.alibaba.druid.filter.stat.StatFilter [StatFilter.java : 478] slow sql 1397 millis. SELECT TRIGGER_NAME, TRIGGER_GROUP, NEXT_FIRE_TIME, PRIORITY FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'QualityshopScheduler' AND TRIGGER_STATE = ? AND NEXT_FIRE_TIME <= ? AND (MISFIRE_INSTR = -1 OR (MISFIRE_INSTR != -1 AND NEXT_FIRE_TIME >= ?)) ORDER BY NEXT_FIRE_TIME ASC, PRIORITY DESC["WAITING",1539223538543,1539223496794]
+2018-10-11 10:05:36,404 [ERROR] [QuartzScheduler_QualityshopScheduler-DESKTOP-TLNGCTM1539175148580_MisfireHandler] com.alibaba.druid.filter.stat.StatFilter [StatFilter.java : 478] slow sql 1945 millis. SELECT COUNT(TRIGGER_NAME) FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'QualityshopScheduler' AND NOT (MISFIRE_INSTR = -1) AND NEXT_FIRE_TIME < ? AND TRIGGER_STATE = ?[1539223522458,"WAITING"]
+2018-10-11 10:06:02,095 [ERROR] [QuartzScheduler_QualityshopScheduler-DESKTOP-TLNGCTM1539175148580_ClusterManager] com.alibaba.druid.filter.stat.StatFilter [StatFilter.java : 478] slow sql 1594 millis. SELECT * FROM QRTZ_SCHEDULER_STATE WHERE SCHED_NAME = 'QualityshopScheduler'[]
+2018-10-11 10:06:03,505 [ERROR] [QuartzScheduler_QualityshopScheduler-DESKTOP-TLNGCTM1539175148580_ClusterManager] com.alibaba.druid.filter.stat.StatFilter [StatFilter.java : 478] slow sql 1407 millis. UPDATE QRTZ_SCHEDULER_STATE SET LAST_CHECKIN_TIME = ? WHERE SCHED_NAME = 'QualityshopScheduler' AND INSTANCE_NAME = ?[1539223562096,"DESKTOP-TLNGCTM1539175148580"]
+2018-10-11 10:06:06,018 [ERROR] [QualityshopScheduler_QuartzSchedulerThread] com.alibaba.druid.filter.stat.StatFilter [StatFilter.java : 478] slow sql 2513 millis. SELECT TRIGGER_NAME, TRIGGER_GROUP, NEXT_FIRE_TIME, PRIORITY FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'QualityshopScheduler' AND TRIGGER_STATE = ? AND NEXT_FIRE_TIME <= ? AND (MISFIRE_INSTR = -1 OR (MISFIRE_INSTR != -1 AND NEXT_FIRE_TIME >= ?)) ORDER BY NEXT_FIRE_TIME ASC, PRIORITY DESC["WAITING",1539223593212,1539223551504]
+2018-10-11 10:06:11,998 [ERROR] [QuartzScheduler_QualityshopScheduler-DESKTOP-TLNGCTM1539175148580_MisfireHandler] com.alibaba.druid.filter.stat.StatFilter [StatFilter.java : 478] slow sql 1114 millis. SELECT COUNT(TRIGGER_NAME) FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'QualityshopScheduler' AND NOT (MISFIRE_INSTR = -1) AND NEXT_FIRE_TIME < ? AND TRIGGER_STATE = ?[1539223558884,"WAITING"]
+2018-10-11 10:07:47,897 [ERROR] [QuartzScheduler_QualityshopScheduler-DESKTOP-TLNGCTM1539175148580_MisfireHandler] com.alibaba.druid.filter.stat.StatFilter [StatFilter.java : 478] slow sql 1125 millis. SELECT COUNT(TRIGGER_NAME) FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'QualityshopScheduler' AND NOT (MISFIRE_INSTR = -1) AND NEXT_FIRE_TIME < ? AND TRIGGER_STATE = ?[1539223654771,"WAITING"]
+2018-10-11 10:08:53,276 [ERROR] [QuartzScheduler_QualityshopScheduler-DESKTOP-TLNGCTM1539175148580_ClusterManager] com.alibaba.druid.filter.stat.StatFilter [StatFilter.java : 478] slow sql 1244 millis. SELECT * FROM QRTZ_SCHEDULER_STATE WHERE SCHED_NAME = 'QualityshopScheduler'[]
+2018-10-11 10:30:00,448 [INFO] [QualityshopScheduler_Worker-8] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 53] 任务准备执行，任务ID：1
+2018-10-11 10:30:00,450 [INFO] [pool-29-thread-1] com.qualityshop.modules.job.task.TestTask [TestTask.java : 27] 我是带参数的test方法，正在被执行，参数为：qualityshop
+2018-10-11 10:30:01,451 [DEBUG] [pool-29-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==>  Preparing: SELECT user_id AS userId,username,`password`,salt,email,mobile,`status`,create_time AS createTime,dept_id AS deptId FROM sys_user WHERE user_id=? 
+2018-10-11 10:30:01,452 [DEBUG] [pool-29-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long)
+2018-10-11 10:30:01,548 [DEBUG] [pool-29-thread-1] com.qualityshop.modules.sys.dao.SysUserDao.selectById [BaseJdbcLogger.java : 159] <==      Total: 1
+2018-10-11 10:30:01,549 [INFO] [QualityshopScheduler_Worker-8] com.qualityshop.modules.job.utils.ScheduleJob [ScheduleJob.java : 66] 任务执行完毕，任务ID：1  总共耗时：1101毫秒
+2018-10-11 10:30:01,619 [DEBUG] [QualityshopScheduler_Worker-8] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==>  Preparing: INSERT INTO schedule_job_log ( job_id, bean_name, method_name, params, `status`, times, create_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2018-10-11 10:30:01,620 [DEBUG] [QualityshopScheduler_Worker-8] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] ==> Parameters: 1(Long), testTask(String), test(String), qualityshop(String), 0(Integer), 1101(Integer), 2018-10-11 10:30:00.448(Timestamp)
+2018-10-11 10:30:01,704 [DEBUG] [QualityshopScheduler_Worker-8] com.qualityshop.modules.job.dao.ScheduleJobLogDao.insert [BaseJdbcLogger.java : 159] <==    Updates: 1
+2018-10-11 10:39:16,746 [INFO] [SessionValidationThread-1] o.apache.shiro.session.mgt.AbstractValidatingSessionManager [AbstractValidatingSessionManager.java : 275] Validating all active sessions...
+2018-10-11 10:39:16,746 [INFO] [SessionValidationThread-1] o.apache.shiro.session.mgt.AbstractValidatingSessionManager [AbstractValidatingSessionManager.java : 308] Finished session validation.  No sessions were stopped.

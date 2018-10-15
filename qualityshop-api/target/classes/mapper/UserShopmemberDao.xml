@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qualityshop.dao.UserShopmemberDao">
+
+    <resultMap type="com.qualityshop.entity.UserShopmemberEntity" id="userShopmemberEntity">
+        <result property="userId" column="userId"/>
+        <result property="userNickName" column="userNickName"/>
+        <result property="userAcutalName" column="userAcutalName"/>
+        <result property="userMemberGrade" column="userMemberGrade"/>
+        <result property="userGender" column="userGender"/>
+        <result property="userBirthday" column="userBirthday"/>
+        <result property="userPhone" column="userPhone"/>
+        <result property="createTime" column="createTime"/>
+        <result property="userNickImg" column="userNickImg"/>
+        <result property="openId" column="openId"/>
+        <result property="alipayName" column="alipayName"/>
+        <result property="alipayAccount" column="alipayAccount"/>
+    </resultMap>
+    <sql id="table_columns">
+        userId,
+        userNickName,
+        userAcutalName,
+        userMemberGrade,
+        userGender,
+        userBirthday,
+        userPhone,
+        createTime,
+        userNickImg,
+        openId,
+        alipayName,
+        alipayAccount
+    </sql>
+    <sql id="entity_properties">
+        #{userId},
+        #{userNickName},
+        #{userAcutalName},
+        #{userMemberGrade},
+        #{userGender},
+        #{userBirthday},
+        #{userPhone},
+        #{createTime},
+        #{userNickImg},
+         #{openId},
+        #{alipayName},
+        #{alipayAccount}
+    </sql>
+    <select id="queryByShopmember" resultMap="userShopmemberEntity" parameterType="String">
+        select <include refid="table_columns" />
+        from user_shopmember
+        where userId = #{userId}
+    </select>
+    <select id="queryOpenByShopmember" resultMap="userShopmemberEntity" parameterType="String">
+        select <include refid="table_columns" />
+        from user_shopmember
+        where openId=#{openId}
+    </select>
+
+    <select id="queryByShopmemberPhone" resultMap="userShopmemberEntity" parameterType="String">
+        select <include refid="table_columns" />
+        from user_shopmember
+        where userPhone = #{userPhone}
+    </select>
+
+    <insert id="insertByShopmember" parameterType="com.qualityshop.entity.UserShopmemberEntity">
+        insert into user_shopmember( <include refid="table_columns" /> )
+        values ( <include refid="entity_properties" /> )
+    </insert>
+    <update id="shopmemberUpdate"  parameterType="com.qualityshop.entity.UserShopmemberEntity">
+        update user_shopmember
+        <trim prefix="set" suffixOverrides=",">
+            <if test="userNickName != null and userNickName != ''">userNickName = #{userNickName},</if>
+            <if test="userAcutalName != null and userAcutalName != ''">userAcutalName = #{userAcutalName},</if>
+            <if test="userMemberGrade != null and userMemberGrade != ''">userMemberGrade = #{userMemberGrade},</if>
+            <if test="userGender != null and userGender != ''">userGender = #{userGender},</if>
+            <if test="userBirthday != null">userBirthday = #{userBirthday},</if>
+            <if test="userPhone != null and userPhone != ''">userPhone = #{userPhone},</if>
+            <if test="createTime !=null">createTime = #{createTime},</if>
+            <if test="userNickImg != null and userNickImg != ''">userNickImg = #{userNickImg},</if>
+            <if test="openId != null and openId != ''">openId = #{openId},</if>
+            <if test="alipayName != null and alipayName != ''">alipayName = #{alipayName},</if>
+            <if test="alipayAccount != null and alipayAccount != ''">alipayAccount = #{alipayAccount}</if>
+        </trim>
+        <where>userId = #{userId}</where>
+    </update>
+    <delete id="shopmemberdelete" parameterType="String">
+        delete from user_shopmember
+        where userId = #{userId}
+    </delete>
+</mapper>

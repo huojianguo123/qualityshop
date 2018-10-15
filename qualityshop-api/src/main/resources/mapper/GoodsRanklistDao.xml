@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qualityshop.dao.GoodsRanklistDao">
+
+    <resultMap type="com.qualityshop.entity.GoodsRanklistEntity" id="goodsRanklistEntity">
+        <result property="goodsId" column="goodsId"/>
+        <result property="goodsName" column="goodsName"/>
+        <result property="rankGoodImg" column="rankGoodImg"/>
+        <result property="actualPrice" column="actualPrice"/>
+        <result property="cutPrice" column="cutPrice"/>
+        <result property="otherPlatform" column="otherPlatform"/>
+
+        <result property="otherPrice" column="otherPrice"/>
+        <result property="visitCount" column="visitCount"/>
+        <result property="recommendReason" column="recommendReason"/>
+        <result property="goodsGrade" column="goodsGrade"/>
+        <result property="goodsTypeid" column="goodsTypeid"/>
+        <result property="userId" column="userId"/>
+        <result property="createTime" column="createTime"/>
+    </resultMap>
+    <sql id="table_columns">
+        goodsId,
+        goodsName,
+        rankGoodImg,
+        actualPrice,
+        cutPrice,
+        otherPlatform,
+        otherPrice,
+        visitCount,
+        recommendReason,
+        goodsGrade,
+        goodsTypeid,
+        userId,
+        createTime
+    </sql>
+    <sql id="entity_properties">
+        #{goodsId},
+        #{goodsName},
+        #{rankGoodImg},
+        #{actualPrice},
+        #{cutPrice},
+        #{otherPlatform},
+        #{otherPrice},
+        #{visitCount},
+        #{recommendReason},
+        #{goodsGrade},
+        #{goodsTypeid},
+        #{userId},
+        #{createTime}
+    </sql>
+
+    <insert id="goodsRanklistInsert" parameterType="com.qualityshop.entity.GoodsRanklistEntity">
+        insert into goods_ranklist( <include refid="table_columns" /> )
+        values ( <include refid="entity_properties" /> )
+    </insert>
+    <select id="goodsRanklistGet" resultMap="goodsRanklistEntity" parameterType="String">
+        select
+        <include refid="table_columns" />
+        from goods_ranklist
+        where goodsId = #{goodsId}
+    </select>
+    <update id="goodsRanklistUpdate"  parameterType="com.qualityshop.entity.GoodsRanklistEntity">
+        update goods_ranklist
+        <trim prefix="set" suffixOverrides=",">
+            <if test="goodsName != null and goodsName != ''">goodsName = #{goodsName},</if>
+            <if test="rankGoodImg != null and rankGoodImg != ''">rankGoodImg = #{rankGoodImg},</if>
+            <if test="actualPrice != null and actualPrice != ''">actualPrice = #{actualPrice},</if>
+            <if test="cutPrice != null and cutPrice != ''">cutPrice = #{cutPrice},</if>
+            <if test="otherPlatform != null and otherPlatform != ''">otherPlatform = #{otherPlatform},</if>
+            <if test="otherPrice != null and otherPrice != ''">otherPrice = #{otherPrice},</if>
+            <if test="visitCount != null and visitCount != ''">visitCount = #{visitCount},</if>
+            <if test="recommendReason != null and recommendReason != ''">recommendReason = #{recommendReason},</if>
+            <if test="goodsGrade != null and goodsGrade != ''">goodsGrade = #{goodsGrade},</if>
+            <if test="goodsTypeid != null and goodsTypeid != ''">goodsTypeid = #{goodsTypeid},</if>
+            <if test="userId != null and userId != ''">userId = #{userId},</if>
+            <if test="createTime !=null">createTime = #{createTime}</if>
+        </trim>
+        <where>goodsId = #{goodsId}</where>
+    </update>
+    <delete id="goodsRanklistDelete" parameterType="String">
+        delete from goods_ranklist
+        where goodsId = #{goodsId}
+    </delete>
+
+    <select id="queryByGoodsRanklistCount" resultMap="goodsRanklistEntity" >
+        select <include refid="table_columns" />
+        from goods_ranklist
+        order by creatTime DESC
+        limit #{param1},#{param2}
+    </select>
+
+    <select id="queryByGoodsRanklistCountId" resultMap="goodsRanklistEntity" >
+        select <include refid="table_columns" />
+        from goods_ranklist
+        where userId = #{userId}
+        order by creatTime DESC
+        limit #{offset},#{end}
+    </select>
+</mapper>

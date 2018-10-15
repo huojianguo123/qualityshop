@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Implementation-Version: 3.2.0
+Built-By: abc
+Implementation-Vendor-Id: com.qualityshop
+Created-By: IntelliJ IDEA
+Build-Jdk: 1.8.0_40
+Main-Class: ${start-class}
+

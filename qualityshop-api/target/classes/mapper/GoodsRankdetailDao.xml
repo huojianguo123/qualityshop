@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qualityshop.dao.GoodsRankdetailDao">
+
+    <resultMap type="com.qualityshop.entity.GoodsRankdetailEntity" id="goodsRankdetailEntity">
+        <result property="goodsDetailId" column="goodsDetailId"/>
+        <result property="goodsId" column="goodsId"/>
+        <result property="goodsDetailTitle" column="goodsDetailTitle"/>
+        <result property="goodsDetailImgId" column="goodsDetailImgId"/>
+        <result property="evalId" column="evalId"/>
+        <result property="commentId" column="commentId"/>
+        <result property="supportCount" column="supportCount"/>
+        <result property="goodsBuyLink" column="goodsBuyLink"/>
+        <result property="actualPrice" column="actualPrice"/>
+        <result property="cutPrice" column="cutPrice"/>
+        <result property="otherPrice" column="otherPrice"/>
+        <result property="visitCount" column="visitCount"/>
+        <result property="userId" column="userId"/>
+        <result property="createTime" column="createTime"/>
+    </resultMap>
+    <sql id="table_columns">
+        goodsDetailId,
+        goodsId,
+        goodsDetailTitle,
+        goodsDetailImgId,
+        evalId,
+        commentId,
+        supportCount,
+        goodsBuyLink,
+        actualPrice,
+        cutPrice,
+        otherPrice,
+        visitCount,
+        userId,
+        createTime
+    </sql>
+    <sql id="entity_properties">
+        #{goodsDetailId},
+        #{goodsId},
+        #{goodsDetailTitle},
+        #{goodsDetailImgId},
+        #{evalId},
+        #{commentId},
+        #{supportCount},
+        #{goodsBuyLink},
+        #{actualPrice},
+        #{cutPrice},
+        #{otherPrice},
+        #{visitCount},
+        #{userId},
+        #{createTime}
+    </sql>
+
+    <insert id="goodsRankdetailInsert" parameterType="com.qualityshop.entity.GoodsRankdetailEntity">
+        insert into goods_rankdetail( <include refid="table_columns" /> )
+        values ( <include refid="entity_properties" /> )
+    </insert>
+    <select id="goodsRankdetailGet" resultMap="goodsRankdetailEntity" parameterType="String">
+        select
+        <include refid="table_columns" />
+        from goods_rankdetail
+        where goodsId = #{goodsId}
+    </select>
+    <update id="goodsRankdetailUpdate"  parameterType="com.qualityshop.entity.GoodsRankdetailEntity">
+        update goods_rankdetail
+        <trim prefix="set" suffixOverrides=",">
+            <if test="goodsDetailId != null and goodsDetailId != ''">goodsDetailId = #{goodsDetailId},</if>
+            <if test="goodsId != null and goodsId != ''">goodsId = #{goodsId},</if>
+            <if test="goodsDetailTitle != null and goodsDetailTitle != ''">goodsDetailTitle = #{goodsDetailTitle},</if>
+            <if test="goodsDetailImgId != null and goodsDetailImgId != ''">goodsDetailImgId = #{goodsDetailImgId},</if>
+            <if test="evalId != null and evalId != ''">evalId = #{evalId},</if>
+            <if test="commentId != null and commentId != ''">commentId = #{commentId},</if>
+            <if test="supportCount != null and supportCount != ''">supportCount = #{supportCount},</if>
+            <if test="goodsBuyLink != null and goodsBuyLink != ''">goodsBuyLink = #{goodsBuyLink},</if>
+            <if test="actualPrice != null and actualPrice != ''">actualPrice = #{actualPrice},</if>
+            <if test="cutPrice != null and cutPrice != ''">cutPrice = #{cutPrice},</if>
+            <if test="otherPrice != null and otherPrice != ''">otherPrice = #{otherPrice},</if>
+            <if test="visitCount != null and visitCount != ''">visitCount = #{visitCount},</if>
+            <if test="userId != null and userId != ''">userId = #{userId},</if>
+            <if test="createTime !=null">createTime = #{createTime}</if>
+        </trim>
+        <where>goodsId = #{goodsId}</where>
+    </update>
+    <delete id="goodsRankdetailDelete" parameterType="String">
+        delete from goods_rankdetail
+        where goodsId = #{goodsId}
+    </delete>
+
+    <select id="queryByGoodsRankdetailCount" resultMap="goodsRankdetailEntity" >
+        select <include refid="table_columns" />
+        from goods_rankdetail
+        order by creatTime DESC
+        limit #{param1},#{param2}
+    </select>
+
+    <select id="queryByGoodsRankdetailCountId" resultMap="goodsRankdetailEntity" >
+        select <include refid="table_columns" />
+        from goods_rankdetail
+        where userId = #{userId}
+        order by creatTime DESC
+        limit #{offset},#{end}
+    </select>
+</mapper>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qualityshop.dao.UserDetailPointDao">
+
+    <resultMap type="com.qualityshop.entity.UserDetailPointEntity" id="userDetailPointEntity">
+        <result property="id" column="id"/>
+        <result property="userId" column="userId"/>
+        <result property="points" column="points"/>
+        <result property="startTime" column="startTime"/>
+        <result property="expireTime" column="expireTime"/>
+        <result property="remark" column="remark"/>
+    </resultMap>
+    <sql id="table_columns">
+        id,
+        userId,
+        points,
+        startTime,
+        expireTime,
+        remark
+    </sql>
+    <sql id="entity_properties">
+        #{id},
+        #{userId},
+        #{points},
+        #{startTime},
+        #{expireTime},
+        #{remark}
+    </sql>
+
+    <insert id="detailPointInsert" parameterType="com.qualityshop.entity.UserDetailPointEntity">
+        insert into user_detail_point( <include refid="table_columns" /> )
+        values ( <include refid="entity_properties" /> )
+    </insert>
+    <select id="detailPointGet" resultMap="userDetailPointEntity" parameterType="String">
+        select
+        <include refid="table_columns" />
+        from user_detail_point
+        where userId = #{userId}
+    </select>
+    <update id="detailPointUpdate"  parameterType="com.qualityshop.entity.UserDetailPointEntity">
+        update user_detail_point
+        <trim prefix="set" suffixOverrides=",">
+            <if test="userId != null and userId != ''">userId = #{userId},</if>
+            <if test="points != null and points != ''">points = #{points},</if>
+            <if test="prority != null and prority != ''">prority = #{prority},</if>
+            <if test="beginTime !=null">beginTime = #{beginTime},</if>
+            <if test="endTime != null">endTime = #{endTime},</if>
+            <if test="state != null and state != ''">state = #{state},</if>
+            <if test="remark != null and remark != ''">remark = #{remark}</if>
+        </trim>
+        <where>id = #{id}</where>
+    </update>
+    <delete id="detailPointDelete" parameterType="String">
+        delete from user_detail_point
+        where userId = #{userId}
+    </delete>
+</mapper>

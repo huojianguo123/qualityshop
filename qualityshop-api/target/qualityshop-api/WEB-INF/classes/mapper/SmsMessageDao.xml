@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qualityshop.dao.SmsMessageDao">
+
+    <resultMap type="com.qualityshop.entity.SmsMessageEntity" id="smsMessageEntity">
+        <result property="id" column="id"/>
+        <result property="mobile" column="mobile"/>
+        <result property="code" column="code"/>
+        <result property="create_time" column="create_time"/>
+        <result property="expire_time" column="expire_time"/>
+    </resultMap>
+    <sql id="table_columns">
+        id,
+        mobile,
+        code,
+        create_time,
+        expire_time
+    </sql>
+    <sql id="entity_properties">
+        #{id},
+        #{mobile},
+        #{code},
+        #{create_time},
+        #{expire_time}
+    </sql>
+
+    <insert id="MessageInsert" parameterType="com.qualityshop.entity.SmsMessageEntity">
+        insert into sms_message( <include refid="table_columns" /> )
+        values ( <include refid="entity_properties" /> )
+    </insert>
+    <select id="MessageGet" resultMap="smsMessageEntity" parameterType="String">
+        select
+        <include refid="table_columns" />
+        from sms_message
+        where mobile = #{mobile}
+    </select>
+    <update id="MessageUpdate"  parameterType="com.qualityshop.entity.SmsMessageEntity">
+        update sms_message
+        <trim prefix="set" suffixOverrides=",">
+            <if test="code != null and code != ''">code = #{code},</if>
+            <if test="create_time !=null">create_time = #{create_time},</if>
+            <if test="expire_time != null">expire_time = #{expire_time}</if>
+        </trim>
+        <where>id = #{id}</where>
+    </update>
+    <delete id="Messagedelete" parameterType="String">
+        delete from sms_message
+        where mobile = #{mobile}
+    </delete>
+</mapper>

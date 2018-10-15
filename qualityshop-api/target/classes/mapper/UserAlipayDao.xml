@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qualityshop.dao.UserAlipayDao">
+
+    <resultMap type="com.qualityshop.entity.UserAlipayEntity" id="UserAlipayEntity">
+        <result property="id" column="id"/>
+        <result property="userId" column="userId"/>
+        <result property="pay_name" column="pay_name"/>
+        <result property="out_biz_no" column="out_biz_no"/>
+        <result property="order_id" column="order_id"/>
+        <result property="accountTime" column="accountTime"/>
+        <result property="amount" column="amount"/>
+    </resultMap>
+    <sql id="table_columns">
+        id,
+        userId,
+        pay_name,
+        out_biz_no,
+        order_id,
+        accountTime,
+        amount
+    </sql>
+    <sql id="entity_properties">
+        #{id},
+        #{userId},
+        #{pay_name},
+        #{out_biz_no},
+        #{order_id},
+        #{accountTime},
+        #{amount}
+
+    </sql>
+    <select id="alipayGet" resultMap="UserAlipayEntity" parameterType="String">
+        select <include refid="table_columns" />
+        from user_alipay
+        where userId = #{userId}
+        order by accountTime DESC
+    </select>
+    <select id="queryByAlipayCountId" resultMap="UserAlipayEntity" >
+        select <include refid="table_columns" />
+        from user_alipay
+        where userId = #{userId}
+        order by accountTime DESC
+        limit #{offset},#{end}
+    </select>
+
+    <insert id="alipayInsert" parameterType="com.qualityshop.entity.UserAlipayEntity">
+        insert into user_alipay( <include refid="table_columns" /> )
+        values ( <include refid="entity_properties" /> )
+    </insert>
+
+</mapper>

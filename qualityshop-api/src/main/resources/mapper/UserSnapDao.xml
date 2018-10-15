@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qualityshop.dao.UserSnapDao">
+
+    <resultMap type="com.qualityshop.entity.UserSnapEntity" id="UserSnapEntity">
+        <result property="id" column="id"/>
+        <result property="user_id" column="user_id"/>
+        <result property="therm_id" column="therm_id"/>
+        <result property="vote_time" column="vote_time"/>
+        <result property="state" column="state"/>
+    </resultMap>
+    <sql id="table_columns">
+        id,
+        user_id,
+        therm_id,
+        vote_time,
+        state
+    </sql>
+    <sql id="entity_properties">
+        #{id},
+        #{user_id},
+        #{therm_id},
+        #{vote_time},
+        #{state}
+
+    </sql>
+    <select id="queryBySnap" resultMap="UserSnapEntity" parameterType="String">
+        select id,user_id,therm_id,vote_time,state
+        from user_sanp
+        where user_id = #{user_id}
+        order by vote_time DESC
+    </select>
+
+    <select id="queryBySnapAll" resultMap="UserSnapEntity" >
+       select id,user_id,therm_id,vote_time,state
+        from user_sanp
+        order by vote_time DESC
+    </select>
+    <select id="queryBySnapCount" resultMap="UserSnapEntity" >
+         select id,user_id,therm_id,vote_time,state
+          from user_sanp
+        order by vote_time DESC
+        limit #{param1},#{param2}
+    </select>
+    <select id="queryBySnapCountId" resultMap="UserSnapEntity" >
+        select id,user_id,therm_id,vote_time,state
+        from user_sanp
+        where user_id = #{user_id}
+        order by create_time DESC
+        limit #{offset},#{end}
+    </select>
+
+    <insert id="insertBySnap" parameterType="com.qualityshop.entity.UserSnapEntity">
+        insert into user_sanp( <include refid="table_columns" /> )
+        values ( <include refid="entity_properties" /> )
+    </insert>
+
+</mapper>

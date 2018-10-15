@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qualityshop.dao.UserCollectDao">
+
+    <resultMap type="com.qualityshop.entity.UserCollectEntity" id="UserCollectEntity">
+        <result property="id" column="id"/>
+        <result property="user_id" column="user_id"/>
+        <result property="project_id" column="project_id"/>
+        <result property="user_name" column="user_name"/>
+        <result property="collect_message" column="collect_message"/>
+        <result property="state" column="state"/>
+        <result property="create_time" column="create_time"/>
+    </resultMap>
+    <sql id="table_columns">
+        id,
+        user_id,
+        project_id,
+        user_name,
+        collect_message,
+        create_time,
+        state
+
+    </sql>
+    <sql id="entity_properties">
+        #{id},
+        #{user_id},
+        #{project_id},
+        #{user_name},
+        #{collect_message},
+        #{create_time},
+        #{state}
+
+    </sql>
+    <select id="queryBySnap" resultMap="UserCollectEntity" parameterType="String">
+        select <include refid="table_columns" />
+        from user_collect
+        where user_id = #{user_id}
+        order by vote_time DESC
+    </select>
+
+    <select id="queryBySnapAll" resultMap="UserCollectEntity" >
+        select <include refid="table_columns" />
+        from user_collect
+        order by vote_time DESC
+    </select>
+    <select id="queryBySnapCount" resultMap="UserCollectEntity" >
+        select <include refid="table_columns" />
+        from user_collect
+        order by vote_time DESC
+        limit #{param1},#{param2}
+    </select>
+    <select id="queryBySnapCountId" resultMap="UserCollectEntity" >
+        select <include refid="table_columns" />
+        from user_collect
+        where user_id = #{user_id}
+        order by create_time DESC
+        limit #{offset},#{end}
+    </select>
+
+    <insert id="insertBySnap" parameterType="com.qualityshop.entity.UserCollectEntity">
+        insert into user_collect( <include refid="table_columns" /> )
+        values ( <include refid="entity_properties" /> )
+    </insert>
+
+</mapper>

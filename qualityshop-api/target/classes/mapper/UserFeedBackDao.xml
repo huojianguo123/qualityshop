@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qualityshop.dao.UserFeedBackDao">
+
+    <resultMap type="com.qualityshop.entity.UserFeedBackEntity" id="userFeedBackEntity">
+        <result property="id" column="id"/>
+        <result property="userId" column="userId"/>
+        <result property="content" column="content"/>
+        <result property="create_time" column="create_time"/>
+    </resultMap>
+    <sql id="table_columns">
+        id,
+        userId,
+        content,
+        create_time
+    </sql>
+    <sql id="entity_properties">
+        #{id},
+        #{userId},
+        #{content},
+        #{create_time}
+    </sql>
+
+    <insert id="feedBackInsert" parameterType="com.qualityshop.entity.UserFeedBackEntity">
+        insert into use_feed_back( <include refid="table_columns" /> )
+        values ( <include refid="entity_properties" /> )
+    </insert>
+    <select id="feedBackGet" resultMap="userFeedBackEntity" parameterType="String">
+        select
+        <include refid="table_columns" />
+        from use_feed_back
+        where userId = #{userId}
+    </select>
+
+</mapper>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qualityshop.dao.UserSignDao">
+
+    <resultMap type="com.qualityshop.entity.UserSignEntity" id="userSignEntity">
+        <result property="sign_id" column="sign_id"/>
+        <result property="userId" column="userId"/>
+        <result property="sign_poins" column="sign_poins"/>
+        <result property="sign_state" column="sign_state"/>
+        <result property="sign_count" column="sign_count"/>
+        <result property="sign_time" column="sign_time"/>
+        <result property="arrays_time" column="arrays_time"/>
+    </resultMap>
+    <sql id="table_columns">
+        sign_id,
+        userId,
+        sign_poins,
+        sign_state,
+        sign_count,
+        sign_time,
+        arrays_time
+    </sql>
+    <sql id="entity_properties">
+        #{sign_id},
+        #{userId},
+        #{sign_poins},
+        #{sign_state},
+        #{sign_count},
+        #{sign_time},
+        #{arrays_time}
+    </sql>
+
+    <insert id="insertBySign" parameterType="com.qualityshop.entity.UserSignEntity">
+        insert into user_sign( <include refid="table_columns" /> )
+        values ( <include refid="entity_properties" /> )
+    </insert>
+    <select id="queryBySign" resultMap="userSignEntity" parameterType="String">
+        select
+        <include refid="table_columns" />
+        from user_sign
+        where userId = #{userId}
+    </select>
+
+    <select id="querySignDatess" resultType="java.lang.Integer">
+        select COUNT(*)from user_sign
+        where userId = #{param1} and DATE_FORMAT(#{param2}, '%Y%m%d') = DATE_FORMAT(now(), '%Y%m%d')
+    </select>
+
+    <select id="querySignDate" resultType="java.lang.Integer">
+       select count(*) from user_sign where userId = #{param1} and sign_time=#{param2}
+    </select>
+
+    <select id="firstSignDate" resultMap="userSignEntity">
+    select
+        <include refid="table_columns" />
+     from user_sign
+    where userId = #{userId}
+    order by sign_time ASC limit 1
+    </select>
+
+    <update id="signUpdate"  parameterType="com.qualityshop.entity.UserSignEntity">
+        update user_sign
+        <trim prefix="set" suffixOverrides=",">
+            <if test="userId != null and userId != ''">userId = #{userId},</if>
+            <if test="sign_poins != null and sign_poins != ''">sign_poins = #{sign_poins},</if>
+            <if test="sign_state != null and sign_state != ''">sign_state = #{sign_state},</if>
+            <if test="sign_count != null and sign_count != ''">sign_count = #{sign_count},</if>
+            <if test="sign_time !=null">sign_time = #{sign_time}</if>
+            <if test="arrays_time != null and arrays_time != ''">arrays_time = #{arrays_time},</if>
+        </trim>
+        <where>userId = #{userId}</where>
+    </update>
+    <delete id="signdelete" parameterType="String">
+        delete from user_sign
+        where userId = #{userId}
+    </delete>
+</mapper>

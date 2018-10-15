@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qualityshop.dao.UserCommentDao">
+
+    <resultMap type="com.qualityshop.entity.UserCommentEntity" id="UserCommentEntity">
+        <result property="id" column="id"/>
+        <result property="artic_id" column="artic_id"/>
+        <result property="user_id" column="user_id"/>
+        <result property="reply_type" column="reply_type"/>
+        <result property="reply_id" column="reply_id"/>
+        <result property="comment_id" column="comment_id"/>
+        <result property="content" column="content"/>
+        <result property="to_uid" column="to_uid"/>
+        <result property="from_uid" column="from_uid"/>
+        <result property="from_thumb_img" column="from_thumb_img"/>
+        <result property="from_nickname" column="from_nickname"/>
+        <result property="create_time" column="create_time"/>
+        <result property="is_author" column="is_author"/>
+
+    </resultMap>
+    <sql id="table_columns">
+        id,
+        artic_id,
+        user_id,
+        reply_type,
+        reply_id,
+        comment_id,
+        content,
+        to_uid,
+        from_uid,
+        from_thumb_img,
+        from_nickname,
+        create_time,
+        is_author
+
+    </sql>
+    <sql id="entity_properties">
+        #{id},
+        #{artic_id},
+        #{user_id},
+        #{reply_type},
+        #{reply_id},
+        #{comment_id},
+        #{content},
+        #{to_uid},
+        #{from_uid},
+        #{from_thumb_img},
+        #{from_nickname},
+        #{create_time},
+        #{is_author}
+    </sql>
+    <select id="queryByComment" resultMap="UserCommentEntity" parameterType="String">
+        select <include refid="table_columns" />
+        from user_comment
+        where user_id = #{user_id}
+        order by create_time DESC
+    </select>
+
+    <select id="queryByCommentAll" resultMap="UserCommentEntity" >
+        select <include refid="table_columns" />
+        from user_comment
+        order by create_time DESC
+    </select>
+    <select id="queryByCommentCount" resultMap="UserCommentEntity" >
+        select <include refid="table_columns" />
+        from user_comment
+        order by create_time DESC
+        limit #{param1},#{param2}
+    </select>
+    <select id="queryByCommentCountId" resultMap="UserCommentEntity" >
+        select <include refid="table_columns" />
+        from user_comment
+        where user_id = #{user_id}
+        order by create_time DESC
+        limit #{offset},#{end}
+    </select>
+
+    <insert id="insertByComment" parameterType="com.qualityshop.entity.UserCommentEntity">
+        insert into user_comment( <include refid="table_columns" /> )
+        values ( <include refid="entity_properties" /> )
+    </insert>
+
+</mapper>

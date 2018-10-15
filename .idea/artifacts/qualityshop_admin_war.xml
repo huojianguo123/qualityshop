@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="qualityshop-admin:war">
+    <output-path>$PROJECT_DIR$/qualityshop-admin/target</output-path>
+    <root id="archive" name="qualityshop-admin.war">
+      <element id="artifact" artifact-name="qualityshop-admin:war exploded" />
+    </root>
+  </artifact>
+</component>

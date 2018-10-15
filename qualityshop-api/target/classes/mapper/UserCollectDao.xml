@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qualityshop.dao.UserCollectDao">
+
+    <resultMap type="com.qualityshop.entity.UserCollectEntity" id="UserCollectEntity">
+        <result property="id" column="id"/>
+        <result property="user_id" column="user_id"/>
+        <result property="project_id" column="project_id"/>
+        <result property="user_name" column="user_name"/>
+        <result property="collect_message" column="collect_message"/>
+        <result property="state" column="state"/>
+        <result property="create_time" column="create_time"/>
+        <result property="collect_name" column="collect_name"/>
+        <result property="collect_price" column="collect_price"/>
+        <result property="collect_nubmer" column="collect_nubmer"/>
+        <result property="product_img" column="product_img"/>
+        <result property="product_tab" column="product_tab"/>
+        <result property="product_price" column="product_price"/>
+        <result property="product_resouce" column="product_resouce"/>
+
+    </resultMap>
+    <sql id="table_columns">
+        id,
+        user_id,
+        project_id,
+        user_name,
+        collect_message,
+        create_time,
+        state,
+        collect_name,
+        collect_price,
+        collect_nubmer,
+        product_img,
+        product_tab,
+        product_price,
+        product_resouce
+
+    </sql>
+    <sql id="entity_properties">
+        #{id},
+        #{user_id},
+        #{project_id},
+        #{user_name},
+        #{collect_message},
+        #{create_time},
+        #{collect_name},
+        #{collect_price},
+        #{collect_nubmer},
+         #{product_img},
+        #{product_tab},
+        #{product_price},
+        #{product_resouce}
+    </sql>
+    <select id="queryByCollect" resultMap="UserCollectEntity" parameterType="String">
+        select <include refid="table_columns" />
+        from user_collect
+        where user_id = #{user_id}
+        order by create_time DESC
+    </select>
+
+    <select id="queryByCollectAll" resultMap="UserCollectEntity" >
+        select <include refid="table_columns" />
+        from user_collect
+        order by create_time DESC
+    </select>
+    <select id="queryByCollectCount" resultMap="UserCollectEntity" >
+        select <include refid="table_columns" />
+        from user_collect
+        order by create_time DESC
+        limit #{param1},#{param2}
+    </select>
+    <select id="queryByCollectCountId" resultMap="UserCollectEntity" >
+        select <include refid="table_columns" />
+        from user_collect
+        where user_id = #{userId}
+        order by create_time DESC
+        limit #{offset},#{end}
+    </select>
+
+    <insert id="insertByCollect" parameterType="com.qualityshop.entity.UserCollectEntity">
+        insert into user_collect( <include refid="table_columns" /> )
+        values ( <include refid="entity_properties" /> )
+    </insert>
+
+</mapper>

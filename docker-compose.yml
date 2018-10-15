@@ -1,0 +1,14 @@
+version: '2'
+services:
+  qualityshop-admin:
+    image: qualityshop/admin
+    ports:
+      - "8080:8080"
+    environment:
+      - spring.profiles.active=dev
+  qualityshop-api:
+    image: qualityshop/api
+    ports:
+      - "8081:8081"
+    environment:
+      - spring.profiles.active=dev
