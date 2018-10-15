@@ -102,3 +102,4 @@ qualityshop-security
 - 需要配置【qualityshop.redis.open=true】，表示开启redis缓存
 - 需要配置【qualityshop.shiro.redis=true】，表示把shiro session存到redis里
 #qualityshop
+# qualityshop
